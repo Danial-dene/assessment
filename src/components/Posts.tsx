@@ -8,7 +8,7 @@ import {
   Select,
   Space,
 } from 'antd';
-import { useRouter } from 'next/router';
+
 import { useEffect, useState } from 'react';
 import { onError } from '../utils';
 import InfiniteScrollComp from './InfiniteScroll';
@@ -26,7 +26,7 @@ type postType = {
 
 const Posts = () => {
   const [form] = Form.useForm();
-  const router = useRouter();
+
   const { category } = useParams();
 
   const [loading, setLoading] = useState(false);

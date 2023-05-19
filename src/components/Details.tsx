@@ -1,12 +1,11 @@
-import { Avatar, Button, Card, Descriptions } from 'antd';
-import React, { useEffect, useState } from 'react';
-import { onError } from '../utils';
-import { Link, useParams } from 'react-router-dom';
+import { Avatar, Card, Descriptions } from 'antd';
 import _ from 'lodash';
-import { postType } from './InfiniteScroll';
 import moment from 'moment';
-import TagComp from './Tag';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { onError } from '../utils';
 import Header from './Header';
+import TagComp from './Tag';
 
 const Details = () => {
   const [loading, setLoading] = useState(false);
