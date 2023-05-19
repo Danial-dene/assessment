@@ -10,7 +10,7 @@ import Header from './Header';
 
 const Details = () => {
   const [loading, setLoading] = useState(false);
-  const [post, setPost] = useState<postType>({});
+  const [post, setPost] = useState<any>();
 
   const { id } = useParams();
 
