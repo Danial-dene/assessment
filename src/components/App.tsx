@@ -1,7 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Posts from './Posts';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Detail from './Details';
+import Posts from './Posts';
 
 const App = () => {
   return (

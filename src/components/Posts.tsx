@@ -1,19 +1,9 @@
-import {
-  Button,
-  Card,
-  Col,
-  Form,
-  FormInstance,
-  Row,
-  Select,
-  Space,
-} from 'antd';
-
+import { Button, Card, Col, Form, FormInstance, Row, Select } from 'antd';
 import { useEffect, useState } from 'react';
-import { onError } from '../utils';
-import InfiniteScrollComp from './InfiniteScroll';
 import { useParams } from 'react-router-dom';
+import { onError } from '../utils';
 import Header from './Header';
+import InfiniteScrollComp from './InfiniteScroll';
 
 type postType = {
   id: string;
@@ -49,7 +39,7 @@ const Posts = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/posts');
+      const response = await fetch('https://assessment-ochre-nine.vercel.app/api/posts');
       const data = await response.json();
 
       // Get the value of a specific query parameter

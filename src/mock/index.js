@@ -4,10 +4,9 @@ import data from './data.json';
 
 createServer({
   routes() {
-    this.namespace = 'api';
-
-    this.get('/posts', () => {
+    this.get('https://assessment-ochre-nine.vercel.app/api/posts', () => {
       return data;
     });
   },
 });
+

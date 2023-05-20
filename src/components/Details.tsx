@@ -21,9 +21,11 @@ const Details = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/posts');
+      const response = await fetch(
+        'https://assessment-ochre-nine.vercel.app/api/posts'
+      );
       const data = await response.json();
-
+      console.log('data', data);
       //get one author
       const filteredData = _.find(data.posts, { id: id });
 
@@ -34,6 +36,8 @@ const Details = () => {
       setLoading(false);
     }
   };
+
+  if (!post) return null;
 
   const { title, summary, publishDate, author, categories } = post;
 

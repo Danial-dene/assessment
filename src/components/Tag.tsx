@@ -6,7 +6,6 @@ type Props = {
   categories: { id: string; name: string }[];
 };
 const TagComp: React.FC<Props> = ({ categories }) => {
-    
   //get color based on name
   const getColor = (name: string) => {
     let color: string;
